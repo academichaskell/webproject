@@ -3,10 +3,13 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE TypeFamilies #-}
-module Handler.Home where
+module Handler.Character where
 
 import Import
 import Database.Persist.Postgresql
 
-getHomeR :: Handler Html
-getHomeR = undefined
+getCharacterR :: Handler Html
+getCharacterR = undefined
+
+postCharacterR :: Handler Html
+postCharacterR = undefined
