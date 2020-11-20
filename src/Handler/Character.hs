@@ -7,6 +7,7 @@
 module Handler.Character where
 
 import Import
+import Text.Lucius
 --import Database.Persist.Postgresql
 
 formCharacter :: Form Character
@@ -34,6 +35,7 @@ getCharacterR :: Handler Html
 getCharacterR = do
     (widget,_) <- generateFormPost formCharacter
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/avatarRegister.lucius")
         $(whamletFile "templates/avatarRegister.hamlet")
 
 postCharacterR :: Handler Html

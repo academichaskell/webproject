@@ -2,7 +2,7 @@
     <div id="previous-btn">
         <a class="back-home" href=@{HomeR}>
             <img src=@{StaticR img_arrowLeft_svg}>
-    <form action=@{CharacterR} method=post>
+    <form class="register-avatar-box" action=@{CharacterR} method=post>
         <h1>
             Criação de personagem
         ^{widget}
