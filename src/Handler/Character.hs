@@ -34,17 +34,7 @@ getCharacterR :: Handler Html
 getCharacterR = do
     (widget,_) <- generateFormPost formCharacter
     defaultLayout $ do
-        [whamlet|
-            <div class="container">
-                <div id="previous-btn">
-                    <a class="back-home" href=@{HomeR}>
-                        <img src=@{StaticR img_arrowLeft_svg}>
-                <form action=@{CharacterR} method=post>
-                    <h1>
-                        Criação de personagem
-                    ^{widget}
-                    <input class="submit-btn" type="submit" value="Criar personagem">
-        |]
+        $(whamletFile "templates/avatarRegister.hamlet")
 
 postCharacterR :: Handler Html
 postCharacterR = do
