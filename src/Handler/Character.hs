@@ -39,6 +39,7 @@ auxCharacterR rt character = do
             toWidgetHead $(luciusFile "templates/avatarRegister.lucius")
             $(whamletFile "templates/avatarRegister.hamlet")
         else do
+            toWidgetHead $(luciusFile "templates/avatarUpdate.lucius")
             $(whamletFile "templates/avatarUpdate.hamlet")
 
 getCharacterR :: Handler Html
