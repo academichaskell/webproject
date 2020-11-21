@@ -5,3 +5,4 @@
 
 / HomeR GET
 /character CharacterR GET POST
+/characters ListCharactersR GET
