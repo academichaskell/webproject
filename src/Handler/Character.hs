@@ -50,28 +50,5 @@ postCharacterR = do
 getListCharactersR :: Handler Html
 getListCharactersR = do
     characters <- runDB $ selectList [] [Asc CharacterName]
-    defaultLayout [whamlet|
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        Nome
-                    
-                    <th>
-                        Classe
-
-                    <th>
-                        Arma primária
-
-            <tbody>
-                $forall (Entity cid character) <- characters
-                    <tr>
-                        <td>
-                            #{characterName character}
-
-                        <td>
-                            #{characterClass character}
-
-                        <td>
-                            #{characterWeapon character}
-    |]
+    defaultLayout $ do
+        $(whamletFile "templates/listCharacters.hamlet")
