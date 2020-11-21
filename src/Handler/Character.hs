@@ -35,8 +35,11 @@ auxCharacterR :: Route App -> Maybe Character -> Handler Html
 auxCharacterR rt character = do
     (widget,_) <- generateFormPost (formCharacter character)
     defaultLayout $ do
-        toWidgetHead $(luciusFile "templates/avatarRegister.lucius")
-        $(whamletFile "templates/avatarRegister.hamlet")
+        if (rt == CharacterR) then do
+            toWidgetHead $(luciusFile "templates/avatarRegister.lucius")
+            $(whamletFile "templates/avatarRegister.hamlet")
+        else do
+            $(whamletFile "templates/avatarUpdate.hamlet")
 
 getCharacterR :: Handler Html
 getCharacterR = auxCharacterR CharacterR Nothing

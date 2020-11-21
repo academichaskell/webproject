@@ -1,0 +1,9 @@
+<div class="container">
+    <div id="previous-btn">
+        <a class="back-home" href=@{ListCharactersR}>
+            <img src=@{StaticR img_arrowLeft_svg}>
+    <form class="register-avatar-box" action=@{rt} method=post>
+        <h1>
+            Modificação do personagem
+        ^{widget}
+        <input class="submit-btn" type="submit" value="Modificar personagem">
