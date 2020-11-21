@@ -23,7 +23,7 @@
                     #{characterWeapon character}
 
             <div class="buttons">
-                <a href=@{HomeR}>
+                <a href=@{UpdateCharacterR cid}>
                     <img src=@{StaticR img_cog_svg}>
 
                 <a href=@{HomeR}>

@@ -3,6 +3,7 @@
 /favicon.ico FaviconR GET
 /robots.txt RobotsR GET
 
-/ HomeR GET
-/character CharacterR GET POST
-/characters ListCharactersR GET
+/                                HomeR             GET
+/character                       CharacterR        GET POST
+/characters                      ListCharactersR   GET
+/character/#CharacterId/update   UpdateCharacterR  GET POST
