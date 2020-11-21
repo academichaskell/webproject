@@ -8,3 +8,5 @@
 /characters                        ListCharactersR   GET
 /character/#CharacterId/update     UpdateCharacterR  GET POST
 /character/#CharacterId/delete     DeleteCharacterR  POST
+
+/user                              UserR             GET POST

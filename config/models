@@ -3,3 +3,9 @@ Character
     class Text
     weapon Text
     deriving Show
+
+User
+    email Text
+    password Text
+    UniqueEmail email
+    deriving Show
