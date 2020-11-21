@@ -1,23 +1,30 @@
-<table>
-    <thead>
-        <tr>
-            <th>
-                Nome
-            
-            <th>
-                Classe
+<div class="container">
+    <div id="add-btn">
+        <a href=@{CharacterR}>
+            <img src=@{StaticR img_user_svg}>
+            Criar novo personagem
 
-            <th>
-                Arma primária
+    $forall Entity cid character <- characters
+        <div class="character">
+            <ul id="title">
+                <li>
+                    Nome
+                <li>
+                    Classe
+                <li>
+                    Arma
 
-    <tbody>
-        $forall (Entity cid character) <- characters
-            <tr>
-                <td>
+            <ul id="character-data">
+                <li>
                     #{characterName character}
-
-                <td>
+                <li>
                     #{characterClass character}
-
-                <td>
+                <li>
                     #{characterWeapon character}
+
+            <div class="buttons">
+                <a href=@{HomeR}>
+                    <img src=@{StaticR img_cog_svg}>
+
+                <a href=@{HomeR}>
+                    <img src=@{StaticR img_trash_svg}>

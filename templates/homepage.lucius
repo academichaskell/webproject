@@ -6,7 +6,7 @@
 }
   
 body {
-    font: 300 14px Roboto, sans-serif;
+    font: 300 14px arial, verdana, sans-serif;
     background-color: #453b61;
     -webkit-font-smoothing: antialiased;
 }

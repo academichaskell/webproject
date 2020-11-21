@@ -44,11 +44,12 @@ postCharacterR = do
     case resp of
         FormSuccess character -> do
             cid <- runDB $ insert character
-            redirect HomeR
+            redirect ListCharactersR
         _ -> redirect HomeR
     
 getListCharactersR :: Handler Html
 getListCharactersR = do
     characters <- runDB $ selectList [] [Asc CharacterName]
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/listCharacters.lucius")
         $(whamletFile "templates/listCharacters.hamlet")
