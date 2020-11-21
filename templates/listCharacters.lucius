@@ -49,10 +49,22 @@ body {
 }
 
 .buttons > a img {
-	height: 20px;
+	height: 18px;
 	float: right;
 	padding-left: 10px;
 	margin-top: 10px;
+}
+
+.buttons > form > input {
+	font-size: 22px;
+	float: right;
+	color: #dc3545;
+	background-color: transparent;
+	border-style: none;
+	font-weight: bold;
+	padding-left: 10px;
+	margin-top: 6px;
+	cursor: pointer;
 }
 
 #title {

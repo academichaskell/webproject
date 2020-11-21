@@ -23,8 +23,8 @@
                     #{characterWeapon character}
 
             <div class="buttons">
+                <form method="post" action=@{DeleteCharacterR cid}>
+                    <input type="submit" value="X">
+                    
                 <a href=@{UpdateCharacterR cid}>
                     <img src=@{StaticR img_cog_svg}>
-
-                <a href=@{HomeR}>
-                    <img src=@{StaticR img_trash_svg}>

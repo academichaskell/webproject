@@ -74,3 +74,9 @@ postUpdateCharacterR cid = do
             runDB $ replace cid new
             redirect (ListCharactersR)
         _ -> redirect HomeR
+
+postDeleteCharacterR :: CharacterId -> Handler Html
+postDeleteCharacterR cid = do
+    _ <- runDB $ get404 cid
+    runDB $ delete cid
+    redirect ListCharactersR
