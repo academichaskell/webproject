@@ -7,6 +7,6 @@
                 Crie aqui personagens e descubra uma nova mesa de RPG esperando por mais uma partida!
             <a href=@{HomeR}>
                 Login
-            <a href=@{HomeR}>
+            <a href=@{UserR}>
                 Cadastrar-se
     <img src=@{StaticR img_avatar_png}>

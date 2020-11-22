@@ -13,29 +13,30 @@ formUser :: Form (User, Text)
 formUser = renderDivs $ (,)
     <$> (User
         <$> areq emailField (FieldSettings "E-mail"
-                                      Nothing
-                                      Nothing
-                                      Nothing
-                                      [("class", "text-field")]
-                            ) Nothing
-        <*> areq passwordField (FieldSettings "Senha"
                                 Nothing
                                 Nothing
                                 Nothing
                                 [("class", "text-field")]
-                            ) Nothing)
+                            ) Nothing
+        <*> areq passwordField (FieldSettings "Senha"
+                                    Nothing
+                                    Nothing
+                                    Nothing
+                                    [("class", "text-field")]
+                                ) Nothing)
     <*> areq passwordField (FieldSettings "Confirmar senha"
-                            Nothing
-                            Nothing
-                            Nothing
-                            [("class", "text-field")]
-                        ) Nothing
+                                Nothing
+                                Nothing
+                                Nothing
+                                [("class", "text-field")]
+                            ) Nothing
                             
 getUserR :: Handler Html
 getUserR = do
     (widget,_) <- generateFormPost formUser
     msg <- getMessage
     defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/userRegister.lucius")
         $(whamletFile "templates/userRegister.hamlet")
 
 postUserR :: Handler Html
