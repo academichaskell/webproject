@@ -15,3 +15,5 @@
 
 /monster                           MonsterR          GET POST
 /monster/#MonsterId/update         UpdateMonsterR    GET POST
+/monsters                          ListMonstersR     GET
+/monster/#MonsterId/delete         DeleteMonsterR    POST

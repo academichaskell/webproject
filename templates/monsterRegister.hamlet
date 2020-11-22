@@ -1,6 +1,6 @@
 <div class="container">
     <div id="previous-btn">
-        <a class="back-home" href=@{HomeR}>
+        <a class="back-home" href=@{ListMonstersR}>
             <img src=@{StaticR img_arrowLeft_svg}>
     <form class="register-monster-box" action=@{rt} method=post>
         <h1>

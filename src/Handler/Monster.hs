@@ -45,8 +45,15 @@ postMonsterR = do
     case resp of
         FormSuccess monster -> do
             mid <- runDB $ insert monster
-            redirect HomeR --ListMonstersR
+            redirect ListMonstersR
         _ -> redirect HomeR
+
+getListMonstersR :: Handler Html
+getListMonstersR = do
+    monsters <- runDB $ selectList [] [Asc MonsterName]
+    defaultLayout $ do
+        toWidgetHead $(luciusFile "templates/listMonsters.lucius")
+        $(whamletFile "templates/listMonsters.hamlet")
 
 getUpdateMonsterR :: MonsterId -> Handler Html
 getUpdateMonsterR mid = do
@@ -59,6 +66,11 @@ postUpdateMonsterR mid = do
     case resp of
         FormSuccess new -> do
             runDB $ replace mid new
-            redirect (HomeR)  --ListMonstersR
+            redirect (ListMonstersR)  
         _ -> redirect HomeR
-    
+
+postDeleteMonsterR :: MonsterId -> Handler Html
+postDeleteMonsterR cid = do
+    _ <- runDB $ get404 cid
+    runDB $ delete cid
+    redirect ListMonstersR

@@ -5,6 +5,10 @@
         <a href=@{CharacterR}>
             <img src=@{StaticR img_user_svg}>
             Criar novo personagem
+    <div id="add-btn">
+        <a href=@{MonsterR}>
+            <img src=@{StaticR img_monster_svg}>
+            Criar novo monstro
 
     $forall Entity cid character <- characters
         <div class="character">

@@ -1,0 +1,32 @@
+<div class="container">
+    <form id="exit-btn" method="post" action=@{LogoffR}>
+        <input type="submit" value="Sair">
+    <div id="add-btn">
+        <a href=@{MonsterR}>
+            <img src=@{StaticR img_monster_svg}>
+            Criar novo monstro
+    <div id="add-btn">
+        <a href=@{CharacterR}>
+            <img src=@{StaticR img_user_svg}>
+            Criar novo personagem
+
+    $forall Entity mid monster <- monsters
+        <div class="monster">
+            <ul id="title">
+                <li>
+                    Nome
+                <li>
+                    HP
+
+            <ul id="monster-data">
+                <li>
+                    #{monsterName monster}
+                <li>
+                    #{monsterLife monster}
+
+            <div class="buttons">
+                <form method="post" action=@{DeleteMonsterR mid}>
+                    <input type="submit" value="X">
+                    
+                <a href=@{UpdateMonsterR mid}>
+                    <img src=@{StaticR img_cog_svg}>
