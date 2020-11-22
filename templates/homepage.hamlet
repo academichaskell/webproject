@@ -5,7 +5,7 @@
                 Embarque no mundo do RPG de mesa
             <p>
                 Crie aqui personagens e descubra uma nova mesa de RPG esperando por mais uma partida!
-            <a href=@{HomeR}>
+            <a href=@{LogonR}>
                 Login
             <a href=@{UserR}>
                 Cadastrar-se

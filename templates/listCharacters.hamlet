@@ -1,4 +1,6 @@
 <div class="container">
+    <form id="exit-btn" method="post" action=@{LogoffR}>
+        <input type="submit" value="Sair">
     <div id="add-btn">
         <a href=@{CharacterR}>
             <img src=@{StaticR img_user_svg}>

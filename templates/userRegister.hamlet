@@ -12,3 +12,5 @@ $maybe message <- msg
             Cadastrar uma conta
         ^{widget}
         <input class="submit-btn" type="submit" value="Cadastrar conta">
+        <a href=@{LogonR}>
+            Entrar na conta

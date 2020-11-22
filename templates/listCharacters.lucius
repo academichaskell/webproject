@@ -95,3 +95,17 @@ ul > li {
 	justify-content: center;
 	color: #ffffff;
 }
+
+#exit-btn {
+	margin-bottom: 20px;
+	float: right;
+}
+
+#exit-btn > input {
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: transparent;
+	border-style: none;
+	cursor: pointer;
+}

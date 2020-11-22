@@ -42,8 +42,8 @@ body {
 	align-content: center;
 }
 
-.register-user-box {
-	height: 450px;
+.signin-box {
+	height: 350px;
 	width: 250px;
 	background-color: #5f5286;
 	border-radius: 20px;
@@ -55,19 +55,19 @@ body {
 	box-shadow: 0 0 1em #272727;
 }
 
-.register-user-box > h1 {
+.signin-box > h1 {
 	color: rgb(4, 207, 119);
 	font-size: 28px;
 	padding-top: 30px;
 }
 
-.register-user-box div > label {
+.signin-box div > label {
 	padding-top: 15px; 
 	color: #ffffff;
 	font-size: 15px;
 }
 
-.register-user-box > a {
+.signin-box > a {
 	text-decoration: none;
 	margin: 0 auto;
 	color: #ffffff;
@@ -77,7 +77,7 @@ body {
 	transition: filter 0.2s;
 }
 
-.register-user-box > a:hover {
+.signin-box > a:hover {
 	filter: brightness(90%);
 }
 

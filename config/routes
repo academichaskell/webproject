@@ -10,3 +10,5 @@
 /character/#CharacterId/delete     DeleteCharacterR  POST
 
 /user                              UserR             GET POST
+/logon                             LogonR            GET POST
+/logoff                            LogoffR           POST
