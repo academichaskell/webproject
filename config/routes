@@ -12,3 +12,6 @@
 /user                              UserR             GET POST
 /logon                             LogonR            GET POST
 /logoff                            LogoffR           POST
+
+/monster                           MonsterR          GET POST
+/monster/#MonsterId/update         UpdateMonsterR    GET POST

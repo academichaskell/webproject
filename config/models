@@ -9,3 +9,8 @@ User
     password Text
     UniqueEmail email
     deriving Show
+
+Monster
+    name Text
+    life Double
+    deriving Show
