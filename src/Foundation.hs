@@ -25,6 +25,7 @@ instance Yesod App where
     authRoute _ = Just LogonR
     
     isAuthorized HomeR _ = return Authorized
+    isAuthorized (StaticR appStatic) _ = return Authorized
     isAuthorized UserR _ = return Authorized
     isAuthorized LogonR _ = return Authorized
     isAuthorized _ _ = isUser
