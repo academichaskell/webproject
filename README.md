@@ -14,7 +14,8 @@
 </div>
 
 <div id="credits">
-  <p aligh="justify">Some .svg icons were used from FontAwesome for a completely academic purpose. The authors of this project have no commercial intention or direct link to the FontAwesome website.<a href="https://fontawesome.com/license"> Click here to visualize the license.</a></p>
+  <h2>Image credits</h2>
+  <p aligh="justify">Some .SVG icons were used from FontAwesome for a completely academic purpose. The authors of this project have no commercial intention or direct link to the FontAwesome website.<a href="https://fontawesome.com/license"> Click here to visualize the license.</a></p>
 </div>
 
 <div id="license">
